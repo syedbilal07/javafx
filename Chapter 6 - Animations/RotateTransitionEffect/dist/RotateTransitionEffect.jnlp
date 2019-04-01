@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="RotateTransitionEffect.jnlp">
+  <information>
+    <title>RotateTransitionEffect</title>
+    <vendor>Syed Bilal</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="RotateTransitionEffect.jar" size="2024" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RotateTransitionEffect" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="rotatetransitioneffect.RotateTransitionEffect"  name="RotateTransitionEffect" />
+  <update check="always"/>
+</jnlp>

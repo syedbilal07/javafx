@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculator.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane id="AnchorPane" layoutX="-2.0" layoutY="-4.0" prefHeight="605.0" prefWidth="428.0" style="-fx-background-color:black;&#10;-fx-background-radius: 25;&#10;-fx-padding: 10;">
+         <children>
+            <HBox id="HBox" alignment="CENTER" focusTraversable="false" layoutX="21.0" layoutY="21.0" spacing="12.0" />
+            <HBox layoutX="25.0" layoutY="495.0" prefHeight="80.0" prefWidth="308.0" spacing="12.0" style="-fx-background-color:black;">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-radius: 0 0 0 25;" text="0" textFill="BLACK">
+                     <font>
+                        <Font name="System Bold" size="24.0" fx:id="x1" />
+                     </font>
+                  </Button>
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDecimalAction" prefHeight="80.0" prefWidth="68.0" text="." textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerEqualAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color:green;" text="=" textFill="WHITE" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color:orange;&#10;-fx-background-radius: 0 0 25 0;" text="+" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="25.0" layoutY="312.0" prefHeight="80.0" prefWidth="308.0" spacing="12.0" style="-fx-background-color:black;">
+               <children>
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="4" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="5" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="6" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color:orange;" text="÷" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="25.0" layoutY="220.0" prefHeight="80.0" prefWidth="308.0" spacing="12.0" style="-fx-background-color:black;">
+               <children>
+                  <Button cancelButton="false" defaultButton="false" font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="7" textAlignment="LEFT" textFill="BLACK" underline="false" wrapText="false" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="8" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="9" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color:orange;" text="x" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox layoutX="25.0" layoutY="404.0" prefHeight="80.0" prefWidth="308.0" spacing="12.0" style="-fx-background-color:black;">
+               <children>
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="1" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="2" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerDigitAction" prefHeight="80.0" prefWidth="68.0" text="3" textFill="BLACK" />
+                  <Button font="$x1" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color:orange;" text="-" textFill="WHITE" />
+               </children>
+            </HBox>
+            <VBox alignment="TOP_RIGHT" layoutX="25.0" layoutY="28.0" prefHeight="80.0" prefWidth="308.0">
+               <children>
+                  <TextField fx:id="txtDisplay" depthTest="DISABLE" editable="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="80.0" prefWidth="319.0" style="-fx-background-color: black; -fx-background-radius: 25; -fx-padding: 10; -fx-text-color: white;" visible="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <Button cancelButton="true" defaultButton="false" layoutX="369.0" layoutY="14.0" minHeight="14.0" minWidth="20.999900000002526" mnemonicParsing="false" onAction="#exitButton" onMouseClicked="#exitButton" prefHeight="28.0" prefWidth="26.9998779296875" style="-fx-background-color:red;&#10;-fx-background-radius: 25 25 25 25;" text="" textFill="WHITE">
+               <font>
+                  <Font name="Constantia" size="24.0" />
+               </font>
+            </Button>
+            <Button cancelButton="false" defaultButton="false" font="$x1" layoutX="25.0" layoutY="129.0" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color: green; -fx-background-radius: 25 0 0 0;" text="AC" textAlignment="LEFT" textFill="WHITE" underline="false" wrapText="false" />
+            <Button font="$x1" layoutX="105.0" layoutY="129.0" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color: orange;" text="√" textFill="WHITE" />
+            <Button layoutX="185.0" layoutY="129.0" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="69.0" style="-fx-background-color: orange;" text="+/-" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Button>
+            <Button font="$x1" layoutX="265.0" layoutY="129.0" mnemonicParsing="false" onAction="#handlerGeneralAction" prefHeight="80.0" prefWidth="68.0" style="-fx-background-color: orange; -fx-background-radius: 0 25 0 0;" text="\%" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
